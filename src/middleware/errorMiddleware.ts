@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { CustomError } from "../utils/CustomError"; // Import CustomError
-import logger from "../utils/logger"; // Import the Winston logger
+import { CustomError } from "../utils/CustomError"; 
+import logger from "../utils/logger"; 
 
 // Error handling middleware
 const errorHandler = (
