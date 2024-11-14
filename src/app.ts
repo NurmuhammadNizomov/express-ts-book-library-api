@@ -39,7 +39,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Enable Morgan logging only in development environment
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev')); // Use 'dev' format for logging in development
 }
 
