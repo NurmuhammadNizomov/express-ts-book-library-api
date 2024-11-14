@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import { sendSuccessResponse, sendErrorResponse } from "../utils/responseHelper";
 
 // Register new user
-export const registerUserController = async (req: Request, res: Response, next: NextFunction) => {
+export const register = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
   try {
     const { name, email, password, role } = req.body;
 
@@ -22,7 +22,7 @@ export const registerUserController = async (req: Request, res: Response, next: 
       name,
       email,
       password: hashedPassword,
-      role: role || "user", // Default to "user" if role is not provided
+      role: role || "user", 
     });
 
     await user.save();

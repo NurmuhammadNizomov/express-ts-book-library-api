@@ -37,7 +37,6 @@ export const getCategoriesController = async (req: Request, res: Response, next:
   }
 };
 
-
 // Get category by ID
 export const getCategoryByIdController = async (req: Request, res: Response, next: NextFunction) => {
   try {
