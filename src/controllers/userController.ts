@@ -35,7 +35,7 @@ export const register = async (req: Request, res: Response, next: NextFunction):
 };
 
 // Update user profile
-export const updateUserController = async (req: Request, res: Response, next: NextFunction) => {
+export const updateUserController = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
   try {
     const { name, email, password } = req.body;
     const userId = req.params.id;
@@ -62,7 +62,7 @@ export const updateUserController = async (req: Request, res: Response, next: Ne
 };
 
 // Get user profile
-export const getUserProfileController = async (req: Request, res: Response, next: NextFunction) => {
+export const getUserProfileController = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
   try {
     const userId = req.params.id;
 
